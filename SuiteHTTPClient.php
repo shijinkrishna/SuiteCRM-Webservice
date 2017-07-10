@@ -28,7 +28,7 @@ class SuiteHttpClient
         curl_setopt($curl, CURLOPT_TIMEOUT, 10);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-        $GLOBALS['log']->debug("HTTP client call: $url -> $postArgs");
+        
         $response = curl_exec($curl);
         if($response === false) {
             $this->last_error = 'ERROR_REQUEST_FAILED';
